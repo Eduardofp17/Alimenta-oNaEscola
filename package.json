@@ -1,0 +1,18 @@
+{
+  "name": "projetontpps",
+  "version": "1.0.0",
+  "description": "This application was made for can help the cooks in the schools around the Brazil",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo Fernandes and Emanoel Brunio",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

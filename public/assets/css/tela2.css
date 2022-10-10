@@ -1,0 +1,259 @@
+/* IMPORTAÇÕES */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* VARIÁVEIS */
+:root{
+    --branco: #FFFFFF;
+    --verde-escuro: #185E2C;
+    --verde-claro:#F9FFFB;  
+    --verde-escuro-fonte: #094019;
+
+}
+
+/* HEADER */
+.cabecalho{
+    width: 100%;
+    background-color: var(--verde-escuro);
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+   justify-content: space-around;
+   gap: 70vw;
+}
+.cabecalhoTela5{
+    width: 100%;
+    background-color: var(--verde-escuro);
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+   justify-content: space-around;
+   gap: 55vw
+}
+.Logout{
+    margin: auto;
+}
+.LogoFiguei{
+    margin: auto;
+}
+.cronogramaSemanal{
+    font-family: 'Roboto';
+    font-weight: 700;
+    text-align: left;
+  
+}
+details{
+    width: 340px;
+    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
+    border-radius: 15px;
+    text-align: left;
+    padding: 22px;
+    font-family: 'Roboto';
+    margin: auto;
+    font-size: 15px;
+    margin-top: 30px;
+}
+details summary{
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    gap: 178px;
+}
+details table{
+    margin-top: 30px;
+}
+details[open] summary{
+    color: var(--verde-escuro-fonte);
+}
+details[open]{
+    background-color: var(--verde-claro);
+}
+details summary span img{
+    transition: 0.3s;
+}
+details[open] summary span img{
+    transition: 0.3s;
+    transform: rotate(-180deg);
+}
+details summary::marker{
+    font-size: 0px;
+}
+table{
+    line-height: 30px;
+    font-size: 15px;
+}
+tr{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 5px;
+    text-align: center;
+}
+th{
+    border-right: 0.2px solid rgba(9, 64, 25, 0.1);
+    padding-right: 4px;
+    
+}
+.line1{
+    border-top: 0.1px solid rgba(9, 64, 25, 0.1) ;
+   padding-top: 5px;
+}
+.line2{
+    border-top: 0.1px solid rgba(9, 64, 25, 0.1) ;
+    padding-top: 5px;
+}
+.line3{
+    border-top: 0.1px solid rgba(9, 64, 25, 0.1) ;
+    padding-top: 5px;
+}
+.terça summary{
+    gap: 199px
+}
+.quarta summary{
+    gap:192px
+}
+.quinta summary{
+    gap: 193px
+}
+.sexta summary{
+    gap: 199px
+}
+
+/* TEXTO */
+@media screen and (max-width: 400px) {
+.cabecalho{
+    gap: 70vw
+} 
+main{
+    width: 100%;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+.cronogramaSemanal{
+    font-family: 'Roboto';
+    font-weight: 700;
+    text-align: left;
+ 
+   
+}
+/* DETAILS CARDÁPIOS */
+details{
+    width: 340px;
+    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
+    border-radius: 15px;
+    text-align: left;
+    padding: 22px;
+    font-family: 'Roboto';
+    margin: auto;
+    font-size: 15px;
+ 
+}
+details summary{
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    gap: 177px;
+}
+details table{
+    margin-top: 30px;
+}
+details[open] summary{
+    color: var(--verde-escuro-fonte);
+}
+details[open]{
+    background-color: var(--verde-claro);
+}
+details summary span img{
+    transition: 0.3s;
+}
+details[open] summary span img{
+    transition: 0.3s;
+    transform: rotate(-180deg);
+}
+details summary::marker{
+    font-size: 0px;
+}
+table{
+    line-height: 30px;
+    font-size: 15px;
+}
+tr{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 5px;
+    text-align: center;
+}
+th{
+    border-right: 0.2px solid rgba(9, 64, 25, 0.1);
+    padding-right: 4px;
+    
+}
+.line1{
+    border-top: 0.1px solid rgba(9, 64, 25, 0.1) ;
+   padding-top: 5px;
+}
+.line2{
+    border-top: 0.1px solid rgba(9, 64, 25, 0.1) ;
+    padding-top: 5px;
+}
+.line3{
+    border-top: 0.1px solid rgba(9, 64, 25, 0.1) ;
+    padding-top: 5px;
+}
+.terça summary{
+    gap: 199px
+}
+.quarta summary{
+    gap:192px
+}
+.quinta summary{
+    gap: 194px
+}
+.sexta summary{
+    gap: 201px
+}
+/* EDITAR CARDÁPIO */
+.editIcon{
+    margin: auto;
+    width: 13px;
+    padding-top: 8px;
+    margin-left: 120px;
+}
+td{
+    font-size: 12px;
+}
+.editIcon2{
+    margin: auto;
+    width: 13px;
+    padding-top: 8px;
+    margin-left: 15px;
+}
+.editIcon3{
+    margin: auto;
+    width: 13px;
+    padding-top: 8px;
+    margin-left: 100px;
+}
+.Voltar{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: auto;
+    text-align: center;
+}
+.Voltar p{
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 12px;
+    margin-top: 1px;
+}
+.arrowBack{
+    width: 15px;
+    height: 13px;
+}
+}

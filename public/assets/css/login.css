@@ -1,0 +1,122 @@
+/* IMPORTAÇÕES */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* VARIÁVEIS */
+:root{
+    --branco: #FFFFFF;
+    --verde-escuro: #185E2C;
+    --verde-claro: #3FA66C;
+    --verde:#094019;
+}
+
+@media screen  and (max-width: 400px){
+    /* HEADER */
+.cabecalho{
+    width: 100%;
+    padding: 30px;
+    margin: auto;
+}
+.propaganda{
+    width: 130px;
+    margin: auto;
+    margin-left: 25vw;
+}
+/* CONTAINER 1 */
+.container1{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+.ordemToUser{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 21px;
+color: var(--verde-claro);
+}
+/* FORM LOGIN */
+.login{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+    font-style: normal;
+    gap: 10px
+}
+.dadosLogin{
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+.Usuario{
+    display: flex;
+    flex-direction: column;
+}
+#User{
+    width: 350px;
+    height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
+    border-radius: 15px;
+    font-size: 13px;
+    padding: 10px;
+    border: none;
+}
+.Senha{
+    display: flex;
+    flex-direction: column;
+}
+#pass{
+    width: 350px;
+    height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
+    border-radius: 15px;
+    font-size: 13px;
+    padding: 10px;
+    border: none;
+}
+.forgotPassword{
+    font-size: 12px;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color:var(--verde);
+}
+.entrar{
+    width: 350px;
+    height: 50px;
+    background-color: var(--verde-escuro);
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 550;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 17px;
+}
+.dontHaveAccount{
+    color: var(--verde);
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Roboto';
+}
+.createAccount{
+    font-weight: bold;
+}
+footer{
+    margin-top: 150px;
+    width: 100%;
+    text-align: center;
+}
+.copyright{
+    color: #C7C7C7;
+    font-family: 'Roboto';
+    font-size: 10px;
+}
+}

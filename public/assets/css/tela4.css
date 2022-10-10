@@ -1,0 +1,117 @@
+/* IMPORTAÇÕES */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* VARIÁVEIS */
+:root{
+    --branco: #FFFFFF;
+    --verde-escuro: #185E2C;
+    --verde-claro: #3FA66C;
+    --verde:#094019;
+}
+
+/* HEADER */
+/* HEADER */
+.cabecalho{
+    width: 100%;
+    background-color: var(--verde-escuro);
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+   justify-content: space-around;
+   gap: 70vw;
+}
+.Logout{
+    margin: auto;
+}
+.LogoFiguei{
+    margin: auto;
+}
+@media screen and (max-width: 400px){
+main{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.AllFerramentas{
+    color: #000000;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: bold;
+}
+.Ferramentas{
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+/* FERRAMENTA CARDÁPIO */
+.editarCardapio{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
+    border-radius: 15px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px
+}
+.Menu{
+    width: 50px;
+}
+.ferramentaCardapio{
+    font-size: 13px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    gap: 210px
+}
+.arrow1 img{
+    transform: rotate(-90deg);
+    width: 12px;
+}
+/* FERRAMENTA FREQUÊNCIA */
+.frequencia{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
+    border-radius: 15px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+}
+.student{
+    width: 45px;
+}
+.ferramentaFrequencia{
+    font-size: 13px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    gap: 150px
+}
+/* FERRAMENTA PARA CALCULAR INGREDIENTES */
+.calculeIngredientes{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
+    border-radius: 15px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 5px 10px;
+}
+.foodIcon{
+    width: 50px;
+}
+.ferramentaCalculadora{
+    font-size: 13px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    gap: 90px
+}
+}
