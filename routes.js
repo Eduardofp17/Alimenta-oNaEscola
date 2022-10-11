@@ -7,10 +7,14 @@ const login = require('./src/Controllers/loginController')
 
 // ROTAS PAGINA INICIAL
 route.get("/", paginaInicial.paginaInicial);
-route.get("/cardapio", paginaInicial.cardapios )
-route.get("/login", paginaInicial.login)
+route.get("/cardapio", paginaInicial.cardapios );
+route.get("/login", paginaInicial.login);
 
 // ROTAS LOGIN
-route.get("/ferramentas", login.ferramentas )
+route.get("/ferramentas", login.ferramentas );
+
+// ROTAS FERRAMENTAS
+route.get("/editarCardapio", login.editarCardapio );
+route.get("/frequencia", login.quantidadeDeAlunos)
 
 module.exports = route;

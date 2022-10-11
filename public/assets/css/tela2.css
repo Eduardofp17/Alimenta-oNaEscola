@@ -10,6 +10,7 @@
 
 }
 
+
 /* HEADER */
 .cabecalho{
     width: 100%;
@@ -38,8 +39,10 @@
 .cronogramaSemanal{
     font-family: 'Roboto';
     font-weight: 700;
-    text-align: left;
-  
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+
 }
 details{
     width: 340px;
@@ -119,6 +122,47 @@ th{
     gap: 199px
 }
 
+
+/* OPÇÃO PARA VOLTAR e TELA 5*/
+.Voltar{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: auto;
+    text-align: center;
+}
+.Voltar p{
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 12px;
+    margin-top: 1px;
+}
+.arrowBack{
+    width: 15px;
+    height: 13px;
+}   
+.editIcon{
+    margin: auto;
+    width: 13px;
+    padding-top: 8px;
+    margin-left: 120px;
+}
+td{
+    font-size: 12px;
+}
+.editIcon2{
+    margin: auto;
+    width: 13px;
+    padding-top: 8px;
+    margin-left: 15px;
+}
+.editIcon3{
+    margin: auto;
+    width: 13px;
+    padding-top: 8px;
+    margin-left: 100px;
+}
 /* TEXTO */
 @media screen and (max-width: 400px) {
 .cabecalho{
@@ -135,8 +179,7 @@ main{
     font-family: 'Roboto';
     font-weight: 700;
     text-align: left;
- 
-   
+    margin: 0;
 }
 /* DETAILS CARDÁPIOS */
 details{
