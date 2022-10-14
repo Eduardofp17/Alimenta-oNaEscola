@@ -18,7 +18,7 @@ body{
 main{
     display: flex;
     flex-direction: column;
-    gap: 200px;
+    gap: 110px;
 }
 /* IMAGEM */
 .imgPropaganda{
@@ -27,7 +27,7 @@ main{
 }
 .img{
     margin: auto;
-    margin-top: 25vh;
+    margin-top: 15vh;
    
 }
 /* BOTOES */
@@ -78,7 +78,7 @@ main{
     main{
         display: flex;
         flex-direction: column;
-        gap: 130px;
+        gap: 110px;
     }
     /* IMAGEM */
     .imgPropaganda{

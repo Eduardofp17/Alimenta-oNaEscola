@@ -122,7 +122,20 @@ th{
     gap: 199px
 }
 
-
+.info{
+    width: 15px;
+    padding-top: 6px;
+    margin-left: 104px;
+}
+.info2{
+    width: 15px;
+    padding-top: 6px;
+}
+.info3{
+    width: 15px;
+    padding-top: 6px;
+    margin-left: 84px;
+}
 /* OPÇÃO PARA VOLTAR e TELA 5*/
 .Voltar{
     display: flex;
