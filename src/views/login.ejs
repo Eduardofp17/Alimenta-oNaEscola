@@ -8,26 +8,41 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/login.css">
 </head>
+
 <body>
-    <header class="cabecalho" >
+    <header class="cabecalho2" >
         <img class="propaganda" src="./assets/images/SemDesperdícioDeComida.png" alt="Propaganda alusiva ao combate ao desperdício de comida">
     </header>
     <main>
         <section class="container1">
             <p class="ordemToUser">Insira suas informações para entrar: </p>
-            <form class="login" action="get">
+            <% if (errors.length > 0) {%>
+                <div class="AlertError">
+                    <% errors.forEach( erro => { %>
+                        <%= erro %> <br>
+                        <% }); %>
+                    </div>
+            <% } %>
+            <% if (success.length > 0) {%>
+                <div class="AlertSucess">
+                    <% success.forEach( success => { %>
+                        <%= success %> <br>
+                        <% }); %>
+                    </div>
+            <% } %>
+            <form class="login" action="/login/login" method="post">
                <div class="dadosLogin">
                     <div class="Usuario">
-                        <label for="User">Nome de usuário: </label>
-                        <input id="User" type="text" placeholder="Digite o nome de usuário aqui">
+                        <label for="User">Email: </label>
+                        <input name="email" id="User" type="text" placeholder="Digite o seu email aqui">
                     </div>
                     <div class="Senha">
                         <label for="pass">Senha: </label>
-                        <input id="pass" type="text" placeholder="Digite a senha aqui">
+                        <input name="password" id="pass" type="text" placeholder="Digite a senha aqui">
                     </div>
                </div>
                <a class="forgotPassword" href="">Esqueci minha senha</a>
-               <a class="entrar" href="/ferramentas">Entrar</a>
+               <button class="entrar">Entrar</button>
                <p class="dontHaveAccount">Não tem uma conta? <span class="createAccount">Solicite com a gestão</span></p>
             </form>
         </section>
@@ -36,4 +51,5 @@
         <p class="copyright">Criado e desenvolvido por Eduardo Fernandes e Emanoel Brunio</p>
     </footer>
 </body>
+
 </html>

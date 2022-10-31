@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferramentas para pessoas autorizadas</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/tela4.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/tela4.css">
 </head>
 <body>
     <header class="cabecalho">
         <div class="LogoFiguei"> 
-            <img src="./assets/images/logoFigueiredo.png" alt="logo da escola Figueiredo Correia" class="LogoFigueiredoCorreia">
+            <a href="/">
+            <img src="/assets/images/logoFigueiredo.png" alt="logo da escola Figueiredo Correia" class="LogoFigueiredoCorreia">
+            </a>
         </div>
         <div class="Logout">
-            <a href="/"> 
+            <a href="/login/logout"> 
                     
-                <img src="./assets/images/doorIcon.png" alt="Porta para sair da aba" class="LogoutDoor">
+                <img src="/assets/images/doorIcon.png" alt="Porta para sair da aba" class="LogoutDoor">
             </a>
         </div>
     </header>
@@ -24,25 +26,35 @@
         <p class="AllFerramentas">Escolha uma opção:</p>
 
         <div class="Ferramentas"> 
+            <% if(user.cargo === 'cozinheira' || user.cargo === 'admin') { %>
             <div class="editarCardapio"> 
-                <img src="./assets/images/menuIcon.png" alt="Ícone de um cardápio" class="Menu">
+                <img src="/assets/images/menuIcon.png" alt="Ícone de um cardápio" class="Menu">
                 <a href="/editarCardapio">
-                    <p class="ferramentaCardapio">Editar cardápio <span class="arrow1"> <img src="./assets/images/arrowIcon.png" alt="Ícone de uma flecha"></span></p>
+                    <p class="ferramentaCardapio">Editar cardápio <span class="arrow1"> <img src="/assets/images/arrowIcon.png" alt="Ícone de uma flecha"></span></p>
 
                 </a>
             </div>
             <div class="frequencia"> 
-                <img src="./assets/images/studentIcon.png" alt="Ícone demonstrando um estudante" class="student">
+                <img src="/assets/images/studentIcon.png" alt="Ícone demonstrando um estudante" class="student">
                 <a href="/frequencia"> 
-                    <p class="ferramentaFrequencia">Ver quantidade de alunos <span class="arrow1"> <img src="./assets/images/arrowIcon.png" alt="Ícone de uma flecha"></span></p>
+                    <p class="ferramentaFrequencia">Ver quantidade de alunos <span class="arrow1"> <img src="/assets/images/arrowIcon.png" alt="Ícone de uma flecha"></span></p>
 
                 </a>
             </div>
             <div class="calculeIngredientes"> 
-                <img src="./assets/images/foodIcon.png" alt="Ícone de comida" class="foodIcon">
-                <p class="ferramentaCalculadora">Calcular quantidade de ingredientes <span class="arrow1"><img src="./assets/images/arrowIcon.png" alt="Ícone de uma flecha"></span> </p>
+                <img src="/assets/images/foodIcon.png" alt="Ícone de comida" class="foodIcon">
+                <p class="ferramentaCalculadora">Calcular quantidade de ingredientes <span class="arrow1"><img src="/assets/images/arrowIcon.png" alt="Ícone de uma flecha"></span> </p>
             </div>
+            <% if (user.cargo === 'admin') { %>
+            <div class="createAccount">
+                <img class="createUser"src="/assets/images/createAccountIcon.png" alt="Icone para criar um novo usuário">
+                <a href="/login/criarConta">
+                <p class="ferramentaCriarConta">Criar conta<span class="arrow1"><img src="/assets/images/arrowIcon.png" alt="Ícone de uma flecha"></span> </p>
+                </a>
+            </div>
+            <%}%>
         </div>
+        <%}%>
     </main>
 </body>
 </html>

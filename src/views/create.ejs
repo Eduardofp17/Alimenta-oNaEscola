@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta</title>
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    
+    
+</head>
+<body>
+    <header class="cabecalho" >
+        <div class="Voltar"> 
+            <a class = "Voltar" href="/ferramentas/<%=user._id%>">
+                <img src="/assets/images/flechaIcon.png" alt="Seta para voltar" class="arrowBack">
+                <p>Criar conta</p>
+
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="container1">
+            <h1>Criar conta</h1>
+            <p class="ordemToUser">Insira as informações da pessoa para criar a conta: </p>
+          
+                <% if (errors.length > 0) {%>
+                    <div class="AlertError">
+                    <% errors.forEach( erro => { %>
+                        <%= erro %> <br>
+                        <% }); %>
+                    </div>
+                <% } %>
+
+            <% if (success.length > 0) {%>
+                <div class="AlertSucess">
+                <% success.forEach( success => { %>
+                    <%= success %> <br>
+                    <% }); %>
+                </div>
+            <% } %>
+            <form class="login" action="/login/criarConta" method="post">
+               <div class="dadosLogin">
+                    <div class="Usuario">
+                        <label for="User">Email: </label>
+                        <input name="email" id="User" type="email" placeholder="Digite o seu email aqui">
+                    </div>
+                    <div class="Senha">
+                        <label for="pass">Senha: </label>
+                        <input name="password" id="pass" type="password" placeholder="Digite a senha aqui">
+                    </div>
+                    <div class="Senha">
+                        <label for="pass">Confirmar senha: </label>
+                        <input  id="pass" type="password" placeholder="Digite a senha novamente aqui">
+                    </div>
+                    <div class="Funcao">
+                        <label for="Funcao">Para quem é a conta?</label>
+                        <select name="cargo" id="funcao">
+                            <option value="cozinheira">Cozinheira</option>
+                            <option value="liderDeSala">Líder de sala</option>
+                            <option value="admin">Administrador</option>
+                        </select>
+
+                    </div>
+               </div>
+               
+               <button class="entrar">Criar conta</button>
+    
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">Criado e desenvolvido por Eduardo Fernandes e Emanoel Brunio</p>
+    </footer>
+</body>
+</html>

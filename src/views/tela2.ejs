@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio E.E.M.T.I Dep. Joaquim de Figueiredo Correia</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/tela2.css">
+    <link rel="stylesheet" href="/assets/css/tela2.css">
+    <script src="/assets/js/index.js"></script>
 </head>
 <body>
     <header class="cabecalho">
@@ -22,17 +23,18 @@
     </header>
     <main>
         <h1 class="cronogramaSemanal">Escolha o dia da semana: </h1>
-
+        <% if (cardapios.length > 0) {%>
+            <% cardapios.forEach(cardapio => {%>
         <details> 
-            <summary>Segunda-feira <span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
+            <summary> <%= cardapio.dia %><span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
             <table>
                 <tr class="line1">
-                   <th>
-                       08:40
-                   </th>
-                   <td>
-                       Cuzcuz e café
-                   </td>
+                    <th>
+                     08:40
+                    </th>
+                    <td>
+                        <%= cardapio.manha %>
+                    </td>
                    <td> <a href="/valorNutricional"> <img class="info" src= "./assets/images/infoIcon.png" alt=""></a></td>
                 </tr>
                 <tr class="line2">
@@ -40,7 +42,7 @@
                        11:30
                    </th>
                    <td>
-                       Arroz, feijão, farofa, frango e suco
+                    <%= cardapio.almoco %>
                    </td>
                    <td> <a href="/valorNutricional"> <img class="info2" src= "./assets/images/infoIcon.png" alt=""></a></td>
                 </tr>
@@ -49,7 +51,7 @@
                         14:40
                     </th>
                     <td>
-                        Bolacha e danone
+                        <%= cardapio.tarde %>
                     </td>
                     <td> 
                         <a href="/valorNutricional"> <img class="info3" src= "./assets/images/infoIcon.png" alt=""></a>
@@ -57,158 +59,8 @@
                  </tr>
             </table>
         </details>
-        <details class="terça"> 
-            <summary>Terça-feira <span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
-            <table>
-                <tr class="line1">
-                   <th>
-                       08:40
-                   </th>
-                   <td>
-                       Cuzcuz e café
-                   </td>
-                   <td> 
-                    <a href=""> <img class="info" src= "./assets/images/infoIcon.png" alt=""></a>
-                </td>
-                </tr>
-                <tr class="line2">
-                   <th>
-                       11:30
-                   </th>
-                   <td>
-                       Arroz, feijão, farofa, frango e suco
-                   </td>
-                   <td> 
-                    <a href=""> <img class="info2" src= "./assets/images/infoIcon.png" alt=""></a>
-                </td>
-                </tr>
-                <tr class="line3">
-                    <th>
-                        14:40
-                    </th>
-                    <td>
-                        Bolacha e danone
-                    </td>
-                    <td> 
-                        <a href=""> <img class="info3" src= "./assets/images/infoIcon.png" alt=""></a>
-                    </td>
-                 </tr>
-            </table>
-        </details>
-        <details class="quarta"> 
-            <summary>Quarta-feira <span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
-            <table>
-                <tr class="line1">
-                   <th>
-                       08:40
-                   </th>
-                   <td>
-                       Cuzcuz e café
-                   </td>
-                   <td> 
-                    <a href=""> <img class="info" src= "./assets/images/infoIcon.png" alt=""></a>
-                </td>
-                </tr>
-                <tr class="line2">
-                   <th>
-                       11:30
-                   </th>
-                   <td>
-                       Arroz, feijão, farofa, frango e suco
-                   </td>
-                   <td> 
-                    <a href=""> <img class="info2" src= "./assets/images/infoIcon.png" alt=""></a>
-                </td>
-                </tr>
-                <tr class="line3">
-                    <th>
-                        14:40
-                    </th>
-                    <td>
-                        Bolacha e danone
-                    </td>
-                    <td> 
-                        <a href=""> <img class="info3" src= "./assets/images/infoIcon.png" alt=""></a>
-                    </td>
-                 </tr>
-            </table>
-        </details>
-        <details class="quinta"> 
-            <summary>Quinta-feira <span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
-            <table>
-                <tr class="line1">
-                   <th>
-                       08:40
-                   </th>
-                   <td>
-                       Cuzcuz e café
-                   </td>
-                   <td> 
-                    <a href=""> <img class="info" src= "./assets/images/infoIcon.png" alt=""></a>
-                </td>
-                </tr>
-                <tr class="line2">
-                   <th>
-                       11:30
-                   </th>
-                   <td>
-                       Arroz, feijão, farofa, frango e suco
-                   </td>
-                   <td> 
-                    <a href=""> <img class="info2" src= "./assets/images/infoIcon.png" alt=""></a>
-                </td>
-                </tr>
-                <tr class="line3">
-                    <th>
-                        14:40
-                    </th>
-                    <td>
-                        Bolacha e danone
-                    </td>
-                    <td> 
-                        <a href=""> <img class="info3" src= "./assets/images/infoIcon.png" alt=""></a>
-                    </td>
-                 </tr>
-            </table>
-        </details>
-        <details class="sexta"> 
-            <summary>Sexta-feira   <span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
-            <table>
-                <tr class="line1">
-                   <th>
-                       08:40
-                   </th>
-                   <td>
-                       Cuzcuz e café
-                   </td>
-                   <td> 
-                    <a href=""> <img class="info" src= "./assets/images/infoIcon.png" alt=""></a>
-                </td>
-                </tr>
-                <tr class="line2">
-                   <th>
-                       11:30
-                   </th>
-                   <td>
-                       Arroz, feijão, farofa, frango e suco
-                   </td>
-                   <td> 
-                    <a href=""> <img class="info2" src= "./assets/images/infoIcon.png" alt=""></a>
-                </td>
-                </tr>
-                <tr class="line3">
-                    <th>
-                        14:40
-                    </th>
-                    <td>
-                        Bolacha e danone
-                    </td>
-                    <td> 
-                        <a href=""> <img class="info3" src= "./assets/images/infoIcon.png" alt=""></a>
-                    </td>
-                 </tr>
-            </table>
-        </details>
+        <% }) %>
+      <%}%>
     </main>
     <footer>
 

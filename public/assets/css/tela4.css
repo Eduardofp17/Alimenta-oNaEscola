@@ -119,6 +119,29 @@ main{
     flex-direction: row;
     gap: 90px
 }
+.createAccount{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
+    border-radius: 15px;
+    width: 350px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 5px;
+}
+.createUser{
+    width: 50px;
+}
+.ferramentaCriarConta{
+    font-size: 13px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+    gap: 235px
+}
 @media screen and (max-width: 400px){
 main{
     padding: 30px;

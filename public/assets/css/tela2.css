@@ -95,7 +95,10 @@ tr{
 th{
     border-right: 0.2px solid rgba(9, 64, 25, 0.1);
     padding-right: 4px;
-    
+    text-align: center;
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .line1{
     border-top: 0.1px solid rgba(9, 64, 25, 0.1) ;
@@ -162,7 +165,8 @@ th{
     margin-left: 120px;
 }
 td{
-    font-size: 12px;
+    font-size: 13px;
+    text-align: left;
 }
 .editIcon2{
     margin: auto;
@@ -246,8 +250,8 @@ tr{
 th{
     border-right: 0.2px solid rgba(9, 64, 25, 0.1);
     padding-right: 4px;
-    
 }
+   
 .line1{
     border-top: 0.1px solid rgba(9, 64, 25, 0.1) ;
    padding-top: 5px;
