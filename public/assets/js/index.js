@@ -8,20 +8,26 @@ class Semanas{
         let yy = today.getFullYear();
         let mm = today.getMonth();
         let dd = today.getDate();
-        this.weekNumOfDate = getWeekNumOfMonthOfDate(new Date(yy, mm, dd))
-        console.log(weekNumOfDate);
-        return this.weekNumOfDate;
+        this.weekNumOfDate = this.getWeekNumOfMonthOfDate(new Date(yy, mm, dd))
+        
+         this.semana = this.verificaSeaSemanaEimpar(this.weekNumOfDate);
+        return this.semana;
     }
-    verificaSeaSemanaEimpar(){
-        if(this.weekNumOfDate % 2 == 0){
+    verificaSeaSemanaEimpar(data){
+      
+        if(data % 2 === 0){
            return this.semana ="pares";
            
-        }else{
+        }else if(data % 2 === 1){ 
            return this.semana = "ímpares";
          
+        }else{
+            return console.log("[ERROR]")
         }
 
 
     }    
 }    
+const semanas = new Semanas().pegarDataAtual();
 module.exports = Semanas;
+
