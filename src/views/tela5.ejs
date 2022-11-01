@@ -23,7 +23,8 @@
     </header>
     <main>
         <h1 class="cronogramaSemanal">Escolha o dia da semana: </h1>
-
+        <% if (cardapios.length > 0) {%>
+            <% cardapios.forEach(cardapio => {%>
         <details> 
             <summary>Segunda-feira <span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
             <table>
@@ -32,7 +33,7 @@
                        08:40
                    </th>
                    <td>
-                       Cuzcuz e café
+                    <%= cardapio.dia %>
                    </td>
                    <td>
                         <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon">
@@ -43,7 +44,7 @@
                        11:30
                    </th>
                    <td>
-                       Arroz, feijão, farofa, frango e suco
+                    <%= cardapio.almoco %>
                    </td>
                    <td>
                     <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon2">
@@ -54,7 +55,7 @@
                         14:40
                     </th>
                     <td>
-                        Bolacha e danone
+                        <%= cardapio.tarde %>
                     </td>
                     <td>
                         <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon3">
@@ -62,158 +63,8 @@
                  </tr>
             </table>
         </details>
-        <details class="terça"> 
-            <summary>Terça-feira <span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
-            <table>
-                <tr class="line1">
-                   <th>
-                       08:40
-                   </th>
-                   <td>
-                       Cuzcuz e café
-                   </td>
-                   <td>
-                    <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon">
-               </td>
-                </tr>
-                <tr class="line2">
-                   <th>
-                       11:30
-                   </th>
-                   <td>
-                       Arroz, feijão, farofa, frango e suco
-                   </td>
-                   <td>
-                    <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon2">
-               </td>
-                </tr>
-                <tr class="line3">
-                    <th>
-                        14:40
-                    </th>
-                    <td>
-                        Bolacha e danone
-                    </td>
-                    <td>
-                        <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon3">
-                   </td>
-                 </tr>
-            </table>
-        </details>
-        <details class="quarta"> 
-            <summary>Quarta-feira <span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
-            <table>
-                <tr class="line1">
-                   <th>
-                       08:40
-                   </th>
-                   <td>
-                       Cuzcuz e café
-                   </td>
-                   <td>
-                    <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon">
-               </td>
-                </tr>
-                <tr class="line2">
-                   <th>
-                       11:30
-                   </th>
-                   <td>
-                       Arroz, feijão, farofa, frango e suco
-                   </td>
-                   <td>
-                    <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon2">
-               </td>
-                </tr>
-                <tr class="line3">
-                    <th>
-                        14:40
-                    </th>
-                    <td>
-                        Bolacha e danone
-                    </td>
-                    <td>
-                        <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon3">
-                   </td>
-                 </tr>
-            </table>
-        </details>
-        <details class="quinta"> 
-            <summary>Quinta-feira <span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
-            <table>
-                <tr class="line1">
-                   <th>
-                       08:40
-                   </th>
-                   <td>
-                       Cuzcuz e café
-                   </td>
-                   <td>
-                    <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon">
-               </td>
-                </tr>
-                <tr class="line2">
-                   <th>
-                       11:30
-                   </th>
-                   <td>
-                       Arroz, feijão, farofa, frango e suco
-                   </td>
-                   <td>
-                    <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon2">
-               </td>
-                </tr>
-                <tr class="line3">
-                    <th>
-                        14:40
-                    </th>
-                    <td>
-                        Bolacha e danone
-                    </td>
-                    <td>
-                        <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon3">
-                   </td>
-                 </tr>
-            </table>
-        </details>
-        <details class="sexta"> 
-            <summary>Sexta-feira   <span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
-            <table>
-                <tr class="line1">
-                   <th>
-                       08:40
-                   </th>
-                   <td>
-                       Cuzcuz e café
-                   </td>
-                   <td>
-                    <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon">
-               </td>
-                </tr>
-                <tr class="line2">
-                   <th>
-                       11:30
-                   </th>
-                   <td>
-                       Arroz, feijão, farofa, frango e suco
-                   </td>
-                   <td>
-                    <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon2">
-               </td>
-                </tr>
-                <tr class="line3">
-                    <th>
-                        14:40
-                    </th>
-                    <td>
-                        Bolacha e danone
-                    </td>
-                    <td>
-                        <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon3">
-                   </td>
-                 </tr>
-            </table>
-        </details>
+        <% }) %>
+        <%}%>
     </main>
     <footer>
 

@@ -22,7 +22,7 @@ route.get("/login/logout", paginaInicial.logout);
 route.get("/ferramentas/:id", loginRequired ,urlencodedParser, middlewareGlobal ,login.ferramentas );
 
 // ROTAS FERRAMENTAS
-route.get("/editarCardapio", urlencodedParser, middlewareGlobal ,login.editarCardapio );
+route.get("/editarCardapio", urlencodedParser, middlewareGlobal , cardapio.editarCardapio);
 route.get("/frequencia", login.quantidadeDeAlunos);
 
 // ROTAS CARDÁPIO

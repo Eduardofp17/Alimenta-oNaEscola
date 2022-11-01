@@ -31,8 +31,10 @@ const sessionOptions = session({
     store:MongoStore.create({mongoUrl: process.env.CONNECTIONSTRING}),
     resave: false,
     saveUninitialized: false,
-    maxAge: 1000 * 60 * 60 * 24 * 7,
-    httpOnly: true
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24 * 7,
+        httpOnly: true
+      }
 });
 
 app.use(sessionOptions);
