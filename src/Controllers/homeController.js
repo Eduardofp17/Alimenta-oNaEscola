@@ -7,7 +7,7 @@ exports.paginaInicial = (req, res) =>{
 };
 exports.cardapios = async (req, res) => {
     const cardapio = new Cardapio(req.body);
-    const semanas = 'pares';
+    const semanas = semana.semana;
     console.log(semanas)
     const cardapios = await cardapio.buscaCardapio(semanas);
     res.render("tela2", {cardapios, semanas});
