@@ -1,15 +1,14 @@
 const Login = require('../models/LoginModel');
 const Cardapio = require('../models/CardapioModel');
-const Semanas = require('../../public/assets/js/index');
+const semana = require('../../public/assets/js/index');
 exports.paginaInicial = (req, res) =>{ 
     res.render('index');
     return;
 };
 exports.cardapios = async (req, res) => {
     const cardapio = new Cardapio(req.body);
-    const semanas =new Semanas().pegarDataAtual();
+    const semanas = semana.semana;
     const cardapios = await cardapio.buscaCardapio(semanas);
-    
     res.render("tela2", {cardapios, semanas});
     return;
 };

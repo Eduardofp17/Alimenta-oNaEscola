@@ -29,5 +29,6 @@ class Semanas{
     }    
 }    
 const semanas = new Semanas().pegarDataAtual();
-module.exports = Semanas;
+
+exports.semana = semanas;
 
