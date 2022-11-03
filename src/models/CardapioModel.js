@@ -14,6 +14,7 @@ const CardapioSchema = new mongoose.Schema({
     constructor(body) {
         this.body = body;
         this.cardapio = null;
+        this.errors = []
       }
       async criarCardapio() {
         try{
@@ -36,8 +37,21 @@ const CardapioSchema = new mongoose.Schema({
       }
       async buscaCardapio  (semanas) {
         const cardapios = await CardapioModel.find({semanas: semanas})
-    
         return cardapios;
+    }
+
+    async buscaPorID (id) {
+      if(typeof id != 'string') return;
+      const cardapio = await CardapioModel.findById(id);
+      return cardapio;
+  }
+    async editaCardapio(id) {
+       if(typeof id != 'string') return;
+     
+   
+      if(this.errors.length > 0) return;
+      
+      this.cardapio = await CardapioModel.findByIdAndUpdate(id, this.body, {new: true});
     }
   }
 

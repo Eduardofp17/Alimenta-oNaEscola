@@ -11,54 +11,62 @@
 <body>
     <header class="cabecalhoTela5">
         <div class="Voltar"> 
-            <a class = "Voltar" href="/ferramentas/<%= user._id %>">
+            <a class = "Voltar" href="/ferramentas/<%=user._id%>">
                 <img src="./assets/images/flechaIcon.png" alt="Seta para voltar" class="arrowBack">
                 <p>Editar cardápio</p>
 
             </a>
         </div>
         <div class="Logout">
+            <a href="/login/logout">
             <img src="./assets/images/doorIcon.png" alt="Porta para sair da aba" class="LogoutDoor">
+            </a>
         </div>
     </header>
     <main>
         <h1 class="cronogramaSemanal">Escolha o dia da semana: </h1>
         <% if (cardapios.length > 0) {%>
             <% cardapios.forEach(cardapio => {%>
-        <details> 
-            <summary>Segunda-feira <span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
+        <details class="<%= cardapio.dia%>"> 
+            <summary><%= cardapio.dia %> <span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
             <table>
                 <tr class="line1">
                    <th>
                        08:40
                    </th>
-                   <td>
-                    <%= cardapio.dia %>
+                   <td class="content">
+                    <%= cardapio.manha %>
                    </td>
                    <td>
+                    <a href="/editarCardapio/editar/<%=cardapio._id%>">
                         <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon">
+                        </a>
                    </td>
                 </tr>
                 <tr class="line2">
                    <th>
                        11:30
                    </th>
-                   <td>
+                   <td class="content2">
                     <%= cardapio.almoco %>
                    </td>
                    <td>
-                    <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon2">
+                    <a href="/editarCardapio/editar/<%=cardapio._id%>">
+                        <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon">
+                        </a>
                </td>
                 </tr>
                 <tr class="line3">
                     <th>
                         14:40
                     </th>
-                    <td>
+                    <td class="content">
                         <%= cardapio.tarde %>
                     </td>
                     <td>
-                        <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon3">
+                        <a href="/editarCardapio/editar/<%=cardapio._id%>">
+                            <img src="./assets/images/editIcon.png" alt="Ícone de edição" class="editIcon">
+                            </a>
                    </td>
                  </tr>
             </table>

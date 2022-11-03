@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio E.E.M.T.I Dep. Joaquim de Figueiredo Correia</title>
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/tela2.css">
+</head>
+<body>
+    <header class="cabecalhoTela5">
+        <div class="Voltar"> 
+            <a class = "Voltar" href="/editarCardapio">
+                <img src="/assets/images/flechaIcon.png" alt="Seta para voltar" class="arrowBack">
+                <p>Editar cardápio</p>
+
+            </a>
+        </div>
+        <div class="Logout">
+            <a href="/login/logout">
+            <img src="/assets/images/doorIcon.png" alt="Porta para sair da aba" class="LogoutDoor">
+            </a>
+        </div>
+    </header>
+    <main>
+        <h1 class="cronogramaSemanal">Escolha o dia da semana: </h1>
+        <% if (errors.length > 0) {%>
+            <div class="AlertError">
+                <% errors.forEach( erro => { %>
+                    <%= erro %> <br>
+                    <% }); %>
+                </div>
+        <% } %>
+        <% if (success.length > 0) {%>
+            <div class="AlertSucess">
+                <% success.forEach( success => { %>
+                    <%= success %> <br>
+                    <% }); %>
+                </div>
+        <% } %>
+        <form action="/editarCardapio/editar/<%=cardapios._id%>" method="post">
+        <details class="<%= cardapios.dia%>"> 
+            <summary><%= cardapios.dia %> <span> <img src="/assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
+            <table>
+                <tr class="line1">
+                   <th>
+                       08:40
+                   </th>
+                   <td>
+                    <input id="first" name="manha" class="editInput" type="text" value=" <%= cardapios.manha %>">
+                   
+                   </td>
+
+                </tr>
+                <tr class="line2">
+                   <th>
+                       11:30
+                   </th>
+                   <td>
+                    <input name="almoco" class="editInput" type="text" value=" <%= cardapios.almoco %>">
+                   
+                </tr>
+                <tr class="line3">
+                    <th>
+                        14:40
+                    </th>
+                    <td>
+                        <input name="tarde" class="editInput" type="text" value=" <%= cardapios.tarde %>">
+                    </td>
+                   
+                 </tr>
+                </table>
+                    <div class="ConclusionButton">
+
+                        <button type="submit" >Concluir</button>
+                     
+                    </div>
+                </details>
+            </form>
+       
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

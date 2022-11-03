@@ -126,7 +126,16 @@ h1 {
     padding: 10px;
     border: none;
 }
-
+#pass2{
+    width: 350px;
+    height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
+    border-radius: 15px;
+    font-size: 13px;
+    padding: 10px;
+    border: none;
+}
 .Funcao {
     display: flex;
     flex-direction: column;
@@ -179,7 +188,7 @@ select {
 }
 
 footer {
-    margin-top: 150px;
+   
     width: 100%;
     text-align: center;
 }
@@ -188,12 +197,12 @@ footer {
     color: #C7C7C7;
     font-family: 'Roboto';
     font-size: 10px;
-    margin-top: 25vh;
+  
 }
 
 .AlertError {
     background-color: #F2D1CE;
-    width: 400px;
+    width: 350px;
     height: auto;
     text-align: center;
     padding: 10px;
@@ -204,7 +213,7 @@ footer {
 
 .AlertSucess {
     background-color: #abe284;
-    width: 400px;
+    width: 350px;
     height: auto;
     text-align: center;
     padding: 10px;
@@ -212,13 +221,20 @@ footer {
     border-radius: 10px;
     margin: auto;
 }
-
+@media screen and (max-width: 500px) {
+    .copyright {
+        color: #C7C7C7;
+        font-family: 'Roboto';
+        font-size: 10px;
+      
+    }
+}
 @media screen and (max-width: 400px) {
 
     /* HEADER */
     .cabecalho {
         width: 100%;
-        padding: 30px;
+        padding: 15px;
         margin: auto;
     }
 
@@ -241,7 +257,7 @@ footer {
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
-        font-size: 15px;
+        font-size: 13px;
         line-height: 21px;
         color: var(--verde-claro);
     }
@@ -258,7 +274,9 @@ footer {
     .dadosLogin {
         display: flex;
         flex-direction: column;
-        gap: 20px
+        gap: 20px;
+        width: 350px;
+       
     }
 
     .Usuario {
@@ -267,7 +285,7 @@ footer {
     }
 
     #User {
-        width: 350px;
+        width: 90%;
         height: 50px;
         background: #FFFFFF;
         box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
@@ -283,7 +301,7 @@ footer {
     }
 
     #pass {
-        width: 350px;
+        width: 90%;
         height: 50px;
         background: #FFFFFF;
         box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
@@ -292,7 +310,12 @@ footer {
         padding: 10px;
         border: none;
     }
-
+    #pass2{
+        width: 90%;
+    }
+    #funcao{
+        width: 90%;
+    }
     .forgotPassword {
         font-size: 12px;
         text-align: right;
@@ -300,10 +323,11 @@ footer {
         font-style: normal;
         font-weight: 400;
         color: var(--verde);
+        margin-right: 10%;
     }
 
     .entrar {
-        width: 350px;
+        width: 90%;
         height: 50px;
         background-color: var(--verde-escuro);
         color: #FFFFFF;
@@ -329,14 +353,21 @@ footer {
     }
 
     footer {
-        margin-top: 150px;
         width: 100%;
         text-align: center;
     }
-
+    
     .copyright {
         color: #C7C7C7;
         font-family: 'Roboto';
         font-size: 10px;
+        margin-top: -5px;
+       
+    }
+    .AlertError{
+        width: 290px;
+    }
+    .AlertSucess{
+        width: 290px;
     }
 }

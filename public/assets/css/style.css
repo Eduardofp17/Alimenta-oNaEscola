@@ -82,8 +82,19 @@ main{
     }
     /* IMAGEM */
     .imgPropaganda{
-        width: 200px;
+        width: 130px;
+        margin: auto;
+       
+    }
+    .buttons{
+        width: 350px;
+    }
+    .ToMenu{
+        width: 80%;
         margin: auto;
     }
-
+    .ToLogin{
+        width: 80%;
+        margin: auto;
+    }
 }

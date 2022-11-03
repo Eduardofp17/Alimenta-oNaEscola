@@ -9,8 +9,9 @@
     --verde-escuro-fonte: #094019;
 
 }
-
-
+body{
+    height: 100%;
+}
 /* HEADER */
 .cabecalho{
     width: 100%;
@@ -85,7 +86,7 @@ table{
     font-size: 15px;
 }
 tr{
-    width: 100%;
+    width: 290px;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -102,7 +103,7 @@ th{
 }
 .line1{
     border-top: 0.1px solid rgba(9, 64, 25, 0.1) ;
-   padding-top: 5px;
+    padding-top: 5px;
 }
 .line2{
     border-top: 0.1px solid rgba(9, 64, 25, 0.1) ;
@@ -112,33 +113,25 @@ th{
     border-top: 0.1px solid rgba(9, 64, 25, 0.1) ;
     padding-top: 5px;
 }
-.terça summary{
-    gap: 199px
+.Terça-feira summary{
+    gap: 198px
 }
-.quarta summary{
-    gap:192px
+.Quarta-feira summary{
+    gap:190px
 }
-.quinta summary{
+.Quinta-feira summary{
     gap: 193px
 }
-.sexta summary{
-    gap: 199px
+.Sexta-feira summary{
+    gap: 200px
 }
 
 .info{
     width: 15px;
     padding-top: 6px;
-    margin-left: 104px;
+   
 }
-.info2{
-    width: 15px;
-    padding-top: 6px;
-}
-.info3{
-    width: 15px;
-    padding-top: 6px;
-    margin-left: 84px;
-}
+
 /* OPÇÃO PARA VOLTAR e TELA 5*/
 .Voltar{
     display: flex;
@@ -162,28 +155,56 @@ th{
     margin: auto;
     width: 13px;
     padding-top: 8px;
-    margin-left: 120px;
+   
 }
-td{
+.content{
     font-size: 13px;
-    text-align: left;
-}
-.editIcon2{
+    text-align: center;
+    align-content: center;
+    width: 220px;
     margin: auto;
-    width: 13px;
-    padding-top: 8px;
-    margin-left: 15px;
 }
-.editIcon3{
+.content2{
+    font-size: 13px;
+    text-align: center;
+    align-content: center;
+    width: 215px;
+}
+.editInput{
+    cursor: pointer;
+    width: 235px;
+    height: 50px;
+    background-color: var(--verde-claro);
+}
+.ConclusionButton {
+    padding: 10px;
+    width: 150px;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
     margin: auto;
-    width: 13px;
-    padding-top: 8px;
-    margin-left: 100px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+.feedbackIcon{
+    background-color: var(--verde-escuro);
+    width: 64px;
+    height: 64px;
+    align-content: center;
+    text-align: center;
+    border-radius: 100px;
+    margin-left: 87%;
+    margin-top: 15%;
+}
+.feedbackIcon a img{
+    margin-top: 17px;
+    width: 25px;
+
 }
 /* TEXTO */
 @media screen and (max-width: 400px) {
-.cabecalho{
-    gap: 70vw
+    .cabecalho{
+        gap: 70vw
 } 
 main{
     width: 100%;
@@ -197,10 +218,11 @@ main{
     font-weight: 700;
     text-align: left;
     margin: 0;
+    margin-left: 20px;
 }
 /* DETAILS CARDÁPIOS */
 details{
-    width: 340px;
+    width: 320px;
     box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
     border-radius: 15px;
     text-align: left;
@@ -227,6 +249,7 @@ details[open]{
 }
 details summary span img{
     transition: 0.3s;
+    position: absolute;
 }
 details[open] summary span img{
     transition: 0.3s;
@@ -264,18 +287,7 @@ th{
     border-top: 0.1px solid rgba(9, 64, 25, 0.1) ;
     padding-top: 5px;
 }
-.terça summary{
-    gap: 199px
-}
-.quarta summary{
-    gap:192px
-}
-.quinta summary{
-    gap: 194px
-}
-.sexta summary{
-    gap: 201px
-}
+
 /* EDITAR CARDÁPIO */
 .editIcon{
     margin: auto;
@@ -285,18 +297,6 @@ th{
 }
 td{
     font-size: 12px;
-}
-.editIcon2{
-    margin: auto;
-    width: 13px;
-    padding-top: 8px;
-    margin-left: 15px;
-}
-.editIcon3{
-    margin: auto;
-    width: 13px;
-    padding-top: 8px;
-    margin-left: 100px;
 }
 .Voltar{
     display: flex;
@@ -315,5 +315,9 @@ td{
 .arrowBack{
     width: 15px;
     height: 13px;
+}
+.feedbackIcon{
+    margin-left: 76%;
+    margin-top: 60%;
 }
 }

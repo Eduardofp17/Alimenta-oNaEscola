@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback da comida da E.E.M.T.I Dep. Joaquim de Figueiredo Correia</title>
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/feedback.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="Voltar"> 
+            <a class = "Voltar" href="/cardapio">
+                <img src="/assets/images/flechaIcon.png" alt="Seta para voltar" class="arrowBack">
+                <p>Feedback</p>
+
+            </a>
+        </div>
+    </header>
+    <main>
+       <h1>Envie seu feedback sobre nossa alimentação:</h1>
+       <form action="https://api.staticforms.xyz/submit" method="post">
+        <div class="Inputs">
+            <div >
+                <label class="label" for="nome">Nome: </label>
+                <input type="text" id="nome" name="name">
+            </div>
+            <div >
+                <label class="label" for="email">Email: </label>
+                <input type="email" id="email" name="email">
+
+            </div>
+            <div >
+                <label class="label" for="mensagem">Feedback: <span class="Required" style="color: #F15252">*</span></label>
+                <textarea name="message" id="mensagem" cols="20" rows="5"  required></textarea>
+
+            </div>
+            <input type="hidden" name="accessKey" value="9c0df09f-4f38-41a1-8dea-52dc97ddd56b">
+            <input type="hidden" name="redirectTo" value="/">
+        </div>
+        <button class="Send" type="submit">Enviar feedback</button>
+
+       </form>
+    </main>
+</body>
+</html>

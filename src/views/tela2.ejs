@@ -25,14 +25,14 @@
         <h1 class="cronogramaSemanal">Escolha o dia da semana: </h1>
         <% if (cardapios.length > 0) {%>
             <% cardapios.forEach(cardapio => {%>
-        <details> 
+        <details class="<%=cardapio.dia%>"> 
             <summary> <%= cardapio.dia %><span> <img src="./assets/images/arrowIcon.png" alt="imagem de flecha"></span></summary>
             <table>
                 <tr class="line1">
                     <th>
                      08:40
                     </th>
-                    <td>
+                    <td class="content">
                         <%= cardapio.manha %>
                     </td>
                    <td> <a href="/valorNutricional"> <img class="info" src= "./assets/images/infoIcon.png" alt=""></a></td>
@@ -41,20 +41,20 @@
                    <th>
                        11:30
                    </th>
-                   <td>
+                   <td class="content2">
                     <%= cardapio.almoco %>
                    </td>
-                   <td> <a href="/valorNutricional"> <img class="info2" src= "./assets/images/infoIcon.png" alt=""></a></td>
+                   <td> <a href="/valorNutricional"> <img class="info" src= "./assets/images/infoIcon.png" alt=""></a></td>
                 </tr>
                 <tr class="line3">
                     <th>
                         14:40
                     </th>
-                    <td>
+                    <td class="content">
                         <%= cardapio.tarde %>
                     </td>
                     <td> 
-                        <a href="/valorNutricional"> <img class="info3" src= "./assets/images/infoIcon.png" alt=""></a>
+                        <a href="/valorNutricional"> <img class="info" src= "./assets/images/infoIcon.png" alt=""></a>
                     </td>
                  </tr>
             </table>
@@ -63,7 +63,12 @@
       <%}%>
     </main>
     <footer>
+        <div class="feedbackIcon">
+            <a  href="/cardapio/feedback">
+                <img src="/assets/images/feedbackIcon.png" alt="Feedback icon">
+            </a>
 
+        </div>
     </footer>
 </body>
 </html>
