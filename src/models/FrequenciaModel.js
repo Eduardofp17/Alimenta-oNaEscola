@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 const moments = require('moment');
+moments.locale('pt-br');
 
 // const date = require('../../public/assets/js/date')
 const FrequenciaSchema = new mongoose.Schema({
     sala: { type: String, required: true },
     alunos: {type: Number, required: true},
-    atualizadoEm: {type: Date, default: Date.now() }
+    atualizadoEm: {type: String}
   });
-  
+
 const FrequenciaModel = mongoose.model('Frequencia', FrequenciaSchema);
 
 class Frequencia {
@@ -26,7 +27,7 @@ class Frequencia {
           this.body = {
               sala: this.body.sala,
               alunos: this.body.QTDalunos,
-              atualizadoEm: Date.now()
+              atualizadoEm: moments().format("DD/MM HH:mm")
           };
     }
      async adicionaFrequencia(){
@@ -52,7 +53,7 @@ class Frequencia {
                 id: frequencia._id,
                 sala: frequencia.sala,
                 alunos: frequencia.alunos,
-                atualizadoEm: moments(frequencia.atualizadoEm).format('DD/MM HH:mm'),
+                atualizadoEm: frequencia.atualizadoEm,
                 total: total
             }
             
@@ -60,8 +61,9 @@ class Frequencia {
         })
     }
     async ultimoAtualizado () {
+        
         const ultimoAtualizado = await FrequenciaModel.find().sort({atualizadoEm: -1});
-        const ultimaData = moments(ultimoAtualizado[0].atualizadoEm).format('DD/MM HH:mm');
+        const ultimaData = ultimoAtualizado[0].atualizadoEm
         return ultimaData;
     }
     async buscaPorID (id) {
