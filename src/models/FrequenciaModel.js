@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const moments = require('moment');
-moments.locale('pt-br');
+const tz = require('moment-timezone')
 
-// const date = require('../../public/assets/js/date')
+
 const FrequenciaSchema = new mongoose.Schema({
     sala: { type: String, required: true },
     alunos: {type: Number, required: true},
@@ -27,7 +27,7 @@ class Frequencia {
           this.body = {
               sala: this.body.sala,
               alunos: this.body.QTDalunos,
-              atualizadoEm: moments().format("DD/MM HH:mm")
+              atualizadoEm: moments().tz('America/Sao_Paulo').format("DD/MM HH:mm")
           };
     }
      async adicionaFrequencia(){
