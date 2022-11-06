@@ -5,6 +5,7 @@ const route = express.Router();
 const paginaInicial = require('./src/Controllers/homeController');
 const login = require('./src/Controllers/loginController');
 const cardapio = require('./src/Controllers/cardapioController');
+const frequencia = require('./src/Controllers/frequenciaController');
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const {middlewareGlobal, loginRequired} = require('./src/middlewares/middleware');
@@ -27,11 +28,15 @@ route.get("/editarCardapio", urlencodedParser, middlewareGlobal , cardapio.edita
 route.get("/editarCardapio/editar/:id", urlencodedParser, middlewareGlobal, cardapio.editarCardapio);
 route.post("/editarCardapio/editar/:id", urlencodedParser, middlewareGlobal, cardapio.editar);
 route.get("/frequencia", login.quantidadeDeAlunos);
-
+route.get("/ferramentas/:id/salasLiberadas", urlencodedParser, middlewareGlobal, login.salasLiberadas )
 // ROTAS CARDÁPIO
 // route.get("/criarCardapio", urlencodedParser ,cardapio.criarCardapio );
 // route.post("/criarCardapio",  urlencodedParser ,cardapio.criarCardapio )
 route.get("/valorNutricional", cardapio.info );
-route.get("/cardapio/feedback",middlewareGlobal, cardapio.feedback )
+route.get("/cardapio/feedback",middlewareGlobal, cardapio.feedback );
+
+// ROTAS FREQUÊNCIA
+route.get("/frequencia/AddFrequencia/:id", urlencodedParser, middlewareGlobal, frequencia.AddFrequenciaIndex )
+route.post("/frequencia/AdicionarFrequencia/add/:id", urlencodedParser, middlewareGlobal, frequencia.AdicionaFrequencia)
 
 module.exports = route;

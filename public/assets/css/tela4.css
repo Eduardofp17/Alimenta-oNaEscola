@@ -73,6 +73,29 @@ main{
     transform: rotate(-90deg);
     width: 12px;
 }
+/* FERRAMENTA SALAS LIBERADAS */
+.SalasLiberadas{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
+    border-radius: 15px;
+    width: 350px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+}
+.people{
+    width: 50px;
+}
+.ferramentaSalasLiberadas{
+    font-size: 13px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    gap: 235px
+}
 /* FERRAMENTA FREQUÊNCIA */
 .frequencia{
     background: #FFFFFF;
@@ -162,44 +185,15 @@ main{
 .Ferramentas{
     display: flex;
     flex-direction: column;
-    gap: 30px
+    gap: 20px;
+    width: 100%;
 }
-/* FERRAMENTA CARDÁPIO */
-.editarCardapio{
-    background: #FFFFFF;
-    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
-    border-radius: 15px;
-    height: 110px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 10px
-}
-.Menu{
-    width: 50px;
-}
-.ferramentaCardapio{
-    font-size: 13px;
-    font-family: 'Roboto';
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    gap: 210px
-}
-.arrow1 img{
-    transform: rotate(-90deg);
-    width: 12px;
-}
+
 /* FERRAMENTA FREQUÊNCIA */
 .frequencia{
-    background: #FFFFFF;
-    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
-    border-radius: 15px;
-    height: 110px;
-    display: flex;
-    flex-direction: column;
+    width: 310px;
     gap: 30px;
-    padding: 10px;
+   margin: auto;
 }
 .student{
     width: 45px;
@@ -210,28 +204,52 @@ main{
     font-weight: bold;
     display: flex;
     flex-direction: row;
-    gap: 150px
+    gap: 131px
+}
+/* FERRAMENTA CONTROLE DAS SALAS */
+
+.SalasLiberadas{
+    width: 310px;
+    margin: auto;
+}
+.ferramentaSalasLiberadas{
+    gap: 215px
+}
+/* FERRAMENTA CARDÁPIO */
+.editarCardapio{
+    width: 310px;
+    margin: auto;
+    gap: 40px;
+}
+.Menu{
+    width: 50px;
+}
+.ferramentaCardapio{
+    font-size: 13px;
+    gap: 190px
+}
+.arrow1 img{
+    transform: rotate(-90deg);
+    width: 11px;
 }
 /* FERRAMENTA PARA CALCULAR INGREDIENTES */
 .calculeIngredientes{
-    background: #FFFFFF;
-    box-shadow: 0px 4px 10px rgba(11, 11, 11, 0.1);
-    border-radius: 15px;
-    height: 110px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 5px 10px;
+   width: 310px;
+   margin: auto;
+   padding: 03px;
 }
 .foodIcon{
     width: 50px;
 }
 .ferramentaCalculadora{
-    font-size: 13px;
-    font-family: 'Roboto';
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    gap: 90px
+    font-size: 12px;
+}
+/* FERRAMENTA CRIAR CONTA */
+.createAccount{
+    width: 310px;
+    margin: auto;
+}
+.ferramentaCriarConta{
+    gap: 210px;
 }
 }

@@ -21,76 +21,37 @@
     <main>
         <table>
             <th id="topico1" class="topicos">Sala</th>
-            <th id="topico2"class="topicos">Quantidade de Alunos</th>
+            <th class="topicos">Quantidade de Alunos</th>
+            <th id="topico2" class="topicos">Atualizado em:</th>
+            <% if (frequencias.length > 0) {%>
+                <% frequencias.forEach( frequencia => {%>
             <tr> 
-                <td id="td1">
-                    1° ANO “A”
+                <td >
+                    <a href="/frequencia/AddFrequencia/<%= frequencia.id%>">
+                    <%= frequencia.sala %>
+                </a>
                 </td>
                 <td>
-                    20
+                    <%= frequencia.alunos %>
+                </td>
+                <td>
+                    <%= frequencia.atualizadoEm %>
                 </td>
             </tr>
-            <tr id="1B"> 
-                <td>
-                    1° ANO “B”
-                </td>
-                <td>
-                    20
-                </td>
-            </tr>
-            <tr> 
-                <td>
-                    2° ANO “A”
-                </td>
-                <td>
-                    20
-                </td>
-            </tr>
-            <tr> 
-                <td>
-                    2° ANO “B”
-                </td>
-                <td>
-                    20
-                </td>
-            </tr>
-            <tr> 
-                <td>
-                    2° ANO “C”
-                </td>
-                <td>
-                    20
-                </td>
-            </tr>
-            <tr> 
-                <td>
-                    3° ANO “A”
-                </td>
-                <td>
-                    20
-                </td>
-            </tr>
-            <tr> 
-                <td>
-                    3° ANO “B”
-                </td>
-                <td>
-                    20
-                </td>
-            </tr>
-            <tr id="c3"> 
-                <td>
-                    3° ANO “C”
-                </td>
-                <td>
-                    0
-                </td>
-            </tr>
+           
+            <% }) %>
+            <%}%>
             <tr class="total">
                 <td id="td3">Total</td>
-                <td id="td4">140</td>
+            
+                <td id="td4"><%= total %></td>
+                <td ><%=ultimoAtualizado%></td>
+                
             </tr>
         </table>
+        <!-- <a href="/frequencia/AdicionarFrequencia" class="AddStudents">
+            Adicionar frequência
+        </a> -->
     </main>
 </body>
 </html>

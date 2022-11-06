@@ -161,7 +161,7 @@ th{
     font-size: 13px;
     text-align: center;
     align-content: center;
-    width: 220px;
+    width: 215px;
     margin: auto;
 }
 .content2{
@@ -293,7 +293,7 @@ th{
     margin: auto;
     width: 13px;
     padding-top: 8px;
-    margin-left: 120px;
+    
 }
 td{
     font-size: 12px;
@@ -318,6 +318,6 @@ td{
 }
 .feedbackIcon{
     margin-left: 76%;
-    margin-top: 60%;
+
 }
 }

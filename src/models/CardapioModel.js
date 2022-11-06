@@ -32,7 +32,7 @@ const CardapioSchema = new mongoose.Schema({
                   semanas: this.body.semanas
               };
               this.cardapio = await CardapioModel.create(this.body);
-
+           
         }catch(e){console.log(e)}
       }
       async buscaCardapio  (semanas) {

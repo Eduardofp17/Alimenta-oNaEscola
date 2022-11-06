@@ -26,6 +26,21 @@
         <p class="AllFerramentas">Escolha uma opção:</p>
 
         <div class="Ferramentas"> 
+        <div class="frequencia"> 
+            <img src="/assets/images/studentIcon.png" alt="Ícone demonstrando um estudante" class="student">
+            <a href="/frequencia"> 
+                <p class="ferramentaFrequencia">Ver quantidade de alunos <span class="arrow1"> <img src="/assets/images/arrowIcon.png" alt="Ícone de uma flecha"></span></p>
+
+            </a>
+        </div>
+        <div class="SalasLiberadas">
+            <img class="people" src="/assets/images/people.png" alt="Ícone com uma comunidade de pessoas">
+            <a href="">
+                <p class="ferramentaSalasLiberadas">
+                    Em breve...<span class="arrow1"> <img src="/assets/images/arrowIcon.png" alt="Ícone de uma flecha"></span>
+                </p>
+            </a>
+        </div>
             <% if(user.cargo === 'cozinheira' || user.cargo === 'admin') { %>
             <div class="editarCardapio"> 
                 <img src="/assets/images/menuIcon.png" alt="Ícone de um cardápio" class="Menu">
@@ -34,13 +49,8 @@
 
                 </a>
             </div>
-            <div class="frequencia"> 
-                <img src="/assets/images/studentIcon.png" alt="Ícone demonstrando um estudante" class="student">
-                <a href="/frequencia"> 
-                    <p class="ferramentaFrequencia">Ver quantidade de alunos <span class="arrow1"> <img src="/assets/images/arrowIcon.png" alt="Ícone de uma flecha"></span></p>
-
-                </a>
-            </div>
+          
+            
             <div class="calculeIngredientes"> 
                 <img src="/assets/images/foodIcon.png" alt="Ícone de comida" class="foodIcon">
                 <p class="ferramentaCalculadora">Calcular quantidade de ingredientes <span class="arrow1"><img src="/assets/images/arrowIcon.png" alt="Ícone de uma flecha"></span> </p>

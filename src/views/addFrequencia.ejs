@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar frequência</title>
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/addFrequencia.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="back">
+            <a class="back" href="/frequencia">
+                <img src="/assets/images/flechaIcon.png" alt="Ícone de uma flecha" class="ArrowBack">
+                <p class="VoltarParaOutraAba"> Adicionar quantidade de alunos</p>
+
+        </a>
+        </div>
+    </header>
+    <main>
+        <h1>Adicione a quantidade de presentes em sua sala: </h1>
+        <% if (errors.length > 0) {%>
+            <div class="AlertError">
+                <% errors.forEach( erro => { %>
+                    <%= erro %> <br>
+                    <% }); %>
+                </div>
+        <% } %>
+        <% if (success.length > 0) {%>
+            <div class="AlertSucess">
+                <% success.forEach( success => { %>
+                    <%= success %> <br>
+                    <% }); %>
+                </div>
+        <% } %>
+        <form action="/frequencia/AdicionarFrequencia/add/<%=frequencia.id%>" method="post">
+            <div class="Inputs">
+                <div class="Input1">
+                    <label for="sala">Selecione sua sala: </label>
+                    <input id="sala" type="text" value="<%= frequencia.sala%>" name="sala">
+
+                </div>
+                <div class="Input2">
+
+                    <label for="Alunos">Quantidade de alunos presentes: </label>
+                    <input name="QTDalunos" id="Alunos" type="number" min="1" max="45" placeholder="Coloque a quantidade aqui" value="<%=frequencia.alunos%>">
+                </div>
+            </div>
+            <button class="create">Adicionar quantidade de alunos</button>
+        </form>
+    </main>
+</body>
+</html>
