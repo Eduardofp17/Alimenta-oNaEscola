@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salas liberadas</title>
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/salasLiberadas.css">
+    <script src="/assets/js/listOrder.js" defer></script>
 </head>
+
 <body>
-    
+    <header class="cabecalho">
+        <div class="Voltar">
+            <a class="Voltar" href="/ferramentas/<%= user._id%>">
+                <img src="/assets/images/flechaIcon.png" alt="Seta para voltar" class="arrowBack">
+                <p>Salas liberadas</p>
+
+            </a>
+        </div>
+    </header>
+    <main>
+        <section>
+
+            <div class="card">
+                <div class="headerCard">
+                    <p> Sala </p>
+                    <p> Status </p>
+                    <p> Modificar</p>
+                </div>
+                <div class="dropzone">
+                    <div class="column" draggable="true">
+                        <p>Sala 01</p>
+                        <p>Liberada</p>
+                        <p><button>Atualizar</button></p>
+                    </div>
+                </div>
+                <div class="dropzone">
+                    <div class="column" draggable="true">
+                        <p>Sala 02</p>
+                        <p>Liberada</p>
+                        <p><button>Atualizar</button></p>
+                    </div>
+                </div>
+                <div class="dropzone">
+                    <div class="column" draggable="true">
+                        <p>Sala 03</p>
+                        <p>Liberada</p>
+                        <p><button>Atualizar</button></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

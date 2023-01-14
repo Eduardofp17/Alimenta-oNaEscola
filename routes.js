@@ -28,7 +28,9 @@ route.get("/editarCardapio", urlencodedParser, middlewareGlobal , cardapio.edita
 route.get("/editarCardapio/editar/:id", urlencodedParser, middlewareGlobal, cardapio.editarCardapio);
 route.post("/editarCardapio/editar/:id", urlencodedParser, middlewareGlobal, cardapio.editar);
 route.get("/frequencia", login.quantidadeDeAlunos);
-route.get("/ferramentas/:id/salasLiberadas", urlencodedParser, middlewareGlobal, login.salasLiberadas )
+route.get("/ferramentas/:id/salasLiberadas", urlencodedParser, middlewareGlobal, login.salasLiberadas );
+
+route.post("/ferramentas/:id/salasLiberadas/:id", urlencodedParser, middlewareGlobal, login.liberaSala);
 // ROTAS CARDÁPIO
 // route.get("/criarCardapio", urlencodedParser ,cardapio.criarCardapio );
 // route.post("/criarCardapio",  urlencodedParser ,cardapio.criarCardapio )

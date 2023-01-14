@@ -1,0 +1,40 @@
+ 
+              <div class="dropzone">
+                <table>
+                    <th id="th1"> Sala</th>
+                    <th>Status</th>
+                    <%if(cargo === "admin") { %>
+                        <th id="th3">Mudar Status</th>
+                        <%}%>
+                    <% if(salas.length > 0){ %>
+                        <% salas.forEach(sala => {%>
+                    <form action="/ferramentas/<%= user._id%>/salasLiberadas/<%=sala._id%>" method="post">
+                        <tr draggable="true" >
+                        <td > 
+                            <%if(cargo === "admin") { %>
+                                <p><%= sala.sala%></p>
+                                <input type="hidden" name="sala" value="<%= sala.sala%>">
+                                <input type="hidden" name="id" value="<%= sala._id%>">
+                            <%} else{%>
+                           <p> <%= sala.sala%></p>
+                           <%}%>
+                        </td>
+                        <td>
+                            
+                            <%if(cargo === "admin") { %>
+                               <p><%= sala.status%></p>
+                               <input type="hidden" name="status" value="<%= sala.status%>">
+                            <%} else{%>
+                           <p> <%= sala.status%></p>
+                           <%}%>
+                        </td>
+                        <%if(cargo === "admin") { %>
+                        <td>
+                            <button type="submit">Atualizar</button>
+                        </td>
+                        <%}%>
+                    </tr>
+                </form>
+                <%})}%> 
+            </table>
+        </div>
